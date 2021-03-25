@@ -8,14 +8,14 @@ import androidx.fragment.app.FragmentTransaction
 
 class MainActivity : AppCompatActivity() {
 
-    var fm: FragmentManager = supportFragmentManager
+    var fragmentManager: FragmentManager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val ft: FragmentTransaction = fm.beginTransaction()
-        ft.add(R.id.fragment_content, HomeFragment())
-        ft.commit()
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.fragment_content, HomeFragment())
+        fragmentTransaction.commit()
     }
 }
